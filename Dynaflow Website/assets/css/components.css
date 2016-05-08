@@ -1,0 +1,1918 @@
+/* ==========================================================================
+   =Accordions and Toggles
+   ========================================================================== */
+
+/* =Accordion
+   ========================================================================== */
+	
+	.accordion { margin-bottom: 30px; }
+
+	.accordion-item {
+		position: relative;
+		display: block;
+		padding: 15px 20px 15px 40px;
+		border: 1px solid #ccc;
+		margin-bottom: 20px;
+		text-transform: uppercase;
+		letter-spacing: 2px;
+		-webkit-transition: all 0.3s;
+				transition: all 0.3s;
+	}
+	
+	.accordion-item:after {
+		position: absolute;
+		top: 15px;
+		right: 15px;
+		font-size: 18px;
+		content: "+";
+	}
+	
+	.accordion-item.active:after { content: "-"; }
+	
+	.accordion-item:hover,
+	.accordion-item.active {
+		border-color: #000;
+		background-color: #000;
+		color: #fff;
+		text-decoration: none;
+	}
+	
+	.accordion-item-content { 
+		display: none; 
+		padding: 10px 0 30px 0;
+	}
+	
+	.accordion-item-content :last-child { margin-bottom: 0; }
+	
+	/*
+	 * 1. Clearfix hack 
+	 */
+	 
+	.accordion-item-content:after { /* 1 */
+		visibility: hidden;
+		display: block;
+		height: 0;
+		font-size: 0;
+		content: " ";
+		clear: both;
+	}
+	
+/* =Toggle
+   ========================================================================== */
+	
+	.toggle { margin-bottom: 30px; }
+	
+	.toggle-item {
+		position: relative;
+		display: block;
+		padding: 15px 20px 15px 40px;
+		border: 1px solid #ccc;
+		margin-bottom: 20px;
+		text-transform: uppercase;
+		letter-spacing: 2px;
+		-webkit-transition: all 0.3s;
+				transition: all 0.3s;
+	}
+	
+	.toggle-item:after {
+		position: absolute;
+		top: 15px;
+		right: 15px;
+		font-size: 18px;
+		content: "+";
+	}
+	
+	.toggle-item.active:after { content: "-"; }
+	
+	.toggle-item:hover,
+	.toggle-item.active {
+		border-color: #000;
+		background-color: #000;
+		color: #fff;
+		text-decoration: none;
+	}
+	
+	.toggle-item-content { 
+		display: none; 
+		padding: 10px 0 30px 0;
+	}
+	
+	.toggle-item-content :last-child { margin-bottom: 0; }
+	
+	/*
+	 * 1. Clearfix hack 
+	 */
+	 
+	.toggle-item-content:after { /* 1 */
+		visibility: hidden;
+		display: block;
+		height: 0;
+		font-size: 0;
+		content: " ";
+		clear: both;
+	}
+
+/* ==========================================================================
+   =Alerts
+   ========================================================================== */
+
+	.alert {
+		position: relative;
+		padding: 13px 15px;
+		border: 1px solid #000;	
+		margin-bottom: 25px;
+		background-color: #fff;
+		color: #000;
+		font-weight: 400;
+	}
+	
+	.alert:after {
+		position: absolute;
+		top: 12px;
+		right: 15px;
+		font-family: "iconfontcustom";
+		content: "\ea77";
+	}
+	
+	.alert i {
+		position: relative;
+		top: 3px;
+		margin-right: 15px;
+		font-size: 20px;
+	}
+	
+	.alert.info {
+		border: 1px solid #000;
+		color: #000;
+	}
+	
+	.alert.success {
+		border: 1px solid #5bb254;
+		color: #5bb254;
+	}
+	
+	.alert.error {
+		border: 1px solid #ff0000;
+		color: #ff0000;
+	}
+	
+	.alert.warning {
+		border: 1px solid #ffaa00;
+		color: #ffaa00;
+	}
+	
+/* ==========================================================================
+   =Animations
+   ========================================================================== */
+   
+   .animate {
+		-webkit-animation-duration: 1s;
+				animation-duration: 1s;
+		-webkit-animation-fill-mode: both;
+				animation-fill-mode: both;
+		visibility: hidden;
+	}
+
+	.animate.visible { visibility: visible; }
+	.animate.hidden { visibility: hidden; }
+	
+/* ==========================================================================
+   =Breadcrumbs
+   ========================================================================== */
+   	
+	.breadcrumbs ul {
+		float: right;
+		margin-bottom: 0;
+		font-size: 12px;
+		line-height: 20px;
+		letter-spacing: 4px;
+		text-transform: uppercase;
+		list-style: none;
+	}
+	
+	.breadcrumbs ul li { display: inline-block; }
+	
+	.breadcrumbs ul li:after {
+		margin: 0 10px;
+		content: "|"; 
+	}
+	
+	.breadcrumbs ul li:last-child:after {
+		margin-right: 0;
+		content: none; 
+	}
+	
+	.breadcrumbs ul li a { color: #76666f; }
+   
+   	@media (max-width: 767px) {
+		
+		.breadcrumbs ul { display: none; }
+		
+	}
+   
+/* ==========================================================================
+   =Buttons
+   ========================================================================== */
+
+/* =Default Button
+   ========================================================================== */
+   
+	.btn {
+		position: relative;
+		z-index: 2;
+		display: inline-block; 
+		padding: 12px 40px 12px 46px;
+		border: 1px solid #000;
+		margin: 0 5px 20px 0;
+		background-color: #000;
+		color: #fff !important;
+		line-height: 18px;
+		letter-spacing: 6px;
+		text-decoration: none !important;
+		cursor: pointer;
+		-webkit-transition: all 0.3s;
+				transition: all 0.3s; 	
+	}
+	
+	.btn:after {
+		position: absolute;
+		z-index: -1;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		width: 0;
+		background-color: #fff;
+		content: "";
+		-webkit-transition: all 0.3s;
+				transition: all 0.3s;
+	}
+	
+	.btn:focus { outline: 0; }
+	
+	.btn-large {
+		padding: 15px 50px 15px 56px;
+		font-size: 14px;
+	}
+	
+	.btn i,
+	.btn-large i { 
+		float: left; 
+		margin: 2px 8px 0 -4px;
+		font-size: 14px; 
+		line-height: 14px; 
+	}
+	
+	.btn:hover:after { width: 100%; }
+	
+	.btn:hover {
+		background-color: transparent; 
+		color: #000 !important;
+	}
+
+/* =Colored Buttons
+   ========================================================================== */
+   
+   	.btn-white {
+		border: 1px solid #000;
+		background-color: transparent;
+		color: #000 !important;
+	}
+	
+	.btn-white:after { background-color: #000 !important; }
+	
+	.btn-white:hover {
+		background-color: transparent; 
+		color: #fff !important;
+	}
+	
+/* ==========================================================================
+   =Clients logos
+   ========================================================================== */
+	
+	.clients-logos {
+		list-style: none;
+		margin: 30px 0;
+	}
+	
+	.clients-logos + .clients-logos {
+		border-top: 1px solid #ccc;
+		margin-top: -30px;
+	}
+	
+	.clients-logos li {
+		float: left;
+		width: 20%;
+		-webkit-box-sizing: border-box;
+		   -moz-box-sizing: border-box;
+				box-sizing: border-box;
+		padding: 20px 0;
+		border-right: 1px solid #ccc;
+		text-align: center;
+	}
+	
+	.clients-logos li:last-child { border-right: none; }
+	
+	/*
+	 * 1. Clearfix hack 
+	 */
+	.clients-logos:after { /* 1 */
+		visibility: hidden;
+		display: block;
+		height: 0;
+		font-size: 0;
+		content: " ";
+		clear: both;		
+	}
+	
+	@media (max-width: 767px) {
+		
+		.clients-logos li {
+			float: none;
+			width: 100%;
+			border-right: none;
+		}
+		
+		.clients-logos + .clients-logos { border-top: none; }
+		
+	}
+	
+/* ==========================================================================
+   =Contact form
+   ========================================================================== */
+  
+	#contact-form { 
+		overflow: hidden; 
+		margin-bottom: 100px; 
+	}
+	
+	#contact-form fieldset {}
+	
+	label.validation-error { color: #f00; }
+	
+	input.validation-error,
+	textarea.validation-error,
+	select.validation-error { border: 1px solid #ccc; }
+	
+	#contact-form #formstatus {}
+		
+	#contact-form textarea {}	
+	
+	/*
+	 * 1. Clearfix hack 
+	 */
+	#contact-form:after { /* 1 */
+		visibility: hidden;
+		display: block;
+		height: 0;
+		font-size: 0;
+		content: " ";
+		clear: both;		
+	}
+
+/* ==========================================================================
+   =Dividers
+   ========================================================================== */
+
+	.divider { margin: 30px 0; }
+	
+	.divider.single-line { border-top: 1px solid #ccc; }
+	
+	.divider.double-line { border-top: 4px double #ccc; }
+	
+	.divider.single-dotted {
+		 height: 1px;
+		 background: url(../images/bg-single-dotted.png) repeat-x top left ;  
+	}
+	
+	.divider.double-dotted { 
+		height: 4px;
+		background: url(../images/bg-double-dotted.png) repeat-x top left; 
+	}	
+	
+/* ==========================================================================
+   =Features list
+   ========================================================================== */
+   
+	.features-list { margin-bottom: 50px; }
+
+	.features-list .features-list-menu {
+		margin: 0 -30px;
+		list-style: none;
+		text-align: center;
+		margin-bottom: 100px;
+	}
+	
+	.features-list .features-list-menu li { 
+		display: inline-block;
+		-webkit-box-sizing: border-box;
+		   -moz-box-sizing: border-box;
+				box-sizing: border-box;
+		padding: 0 15px;
+	}
+	
+	.features-list .features-list-menu li a {
+		position: relative; 
+		display: block;
+		width: 130px;
+		height: 130px;
+		border: 1px solid #000;
+		border-radius: 50%;
+		text-align: center;
+		text-decoration: none;
+	}
+	
+	.features-list .features-list-menu li a span {
+		position: absolute;
+		top: 50%;
+		left: 0;
+		display: block;
+		width: 100%;
+		-webkit-transform: translateY(-50%);
+			-ms-transform: translateY(-50%);
+				transform: translateY(-50%);
+	}
+	
+	.features-list .features-list-menu li:last-child a { margin-right: 0; }
+	
+	.features-list .features-list-menu li a:hover { text-decoration: none; }
+	
+	.features-list .features-list-menu li a:hover,
+	.features-list .features-list-menu li.active a {
+		border-color: #ccc; 
+		background-color: #fff;
+		color: #000; 
+	}
+	
+	.features-list .tabs {}
+	
+	.features-list .tab-content { padding: 0 150px; }	
+	
+	/*
+	 * 1. Clearfix hack 
+	 */
+	.features-list .features-list-menu:after,
+	.features-list .tab-content:after { /* 1 */
+		visibility: hidden;
+		display: block;
+		height: 0;
+		font-size: 0;
+		content: " ";
+		clear: both;		
+	}
+	
+	@media (min-width: 1200px) {
+		
+		.features-list .features-list-menu li { padding: 0 30px; }
+		
+	}
+	
+	@media (min-width: 768px) and (max-width: 991px) {
+		
+		.features-list .features-list-menu li { 
+			padding: 0 30px;
+			margin: 15px 0;
+		}
+		
+	}
+	
+	@media (max-width: 767px) {
+		
+		.features-list .features-list-menu li { margin: 15px 0; }
+		
+		.features-list .tab-content { padding: 0; }	
+		
+	}
+   
+/* ==========================================================================
+   =Google Maps
+   ========================================================================== */
+
+	 /**
+	 * 1. needed so that Google Maps controls are not distorted
+	 */
+	 
+	.google-map {
+		width: 100%; 
+		height: 400px;
+	}
+	
+	.google-map  img { max-width: none; }	/* 1 */
+	
+	.map { margin-bottom: 40px; }
+	
+	@media (max-width: 767px) {
+
+		.map { padding: 0 20px; }
+		.row .map { padding: 0; }
+		
+	}
+
+/* ==========================================================================
+   =Headlines
+   ========================================================================== */
+
+	.headline { margin-bottom: 50px; }
+	
+	.headline:after {
+		display: block;
+		width: 45px;
+		border-bottom: 1px solid #000;
+		margin-top: 10px;
+		content: "";
+	}
+	
+	.headline h2 { margin-bottom: 0; }
+	
+	.headline-center { 
+		margin-bottom: 100px;
+		text-align: center;
+	}
+	
+	.headline-center:after {
+		display: block;
+		width: 45px;
+		border-bottom: 1px solid #000;
+		margin: 10px auto 0 auto;
+		content: "";
+	}
+	
+	.headline-center h2 { margin-bottom: 0; }
+	
+/* ==========================================================================
+   =Icon Boxes
+   ========================================================================== */
+
+/* =Icon Box 1
+   ========================================================================== */
+   
+	.icon-box-1 { 
+		position: relative; 
+		margin-bottom: 70px; 
+	}
+		
+	.icon-box-1 > i { 
+		display: block;
+		margin-bottom: 20px; 
+		font-size: 25px;
+	}
+	
+	.icon-box-1 > img { margin-bottom: 20px; }
+	
+	.icon-box-1 h5 {
+		margin-bottom: 50px;
+		font-weight: 400;
+	}
+	
+	.icon-box-1 .icon-box-content {}		
+
+/* =Icon Box 2
+   ========================================================================== */
+   
+	.icon-box-2 { 
+		position: relative; 
+		margin-bottom: 70px; 
+	}	
+	
+	.icon-box-2 > i { 
+		float: left;
+		margin-right: 20px;		 
+		font-size: 25px; 
+	} 
+	
+	.icon-box-2 > img { 
+		float: left; 
+		margin-right: 20px; 
+	} 
+	
+	.icon-box-2 h5 {
+		margin-bottom: 20px;
+		font-weight: 400;
+	}
+	
+	.icon-box-2 .icon-box-content {}
+	
+/* =Icon Box 3
+   ========================================================================== */
+   
+	.icon-box-3 { 
+		position: relative; 
+		margin-bottom: 70px;
+		text-align: right;
+	}	
+	
+	.icon-box-3 > i { 
+		float: right;
+		margin-left: 20px;		 
+		font-size: 25px; 
+	} 
+	
+	.icon-box-3 > img { 
+		float: right; 
+		margin-left: 20px; 
+	} 
+	
+	.icon-box-3 h5 {
+		margin-bottom: 20px;
+		font-weight: 400;
+	}
+	
+	.icon-box-3 .icon-box-content {}
+	
+/* =Icon Box 4
+   ========================================================================== */
+   
+	.icon-box-4 { 
+		margin-bottom: 70px;
+		color: #999;
+		letter-spacing: 2px;
+		text-align: center;
+		-webkit-transition: color 0.3s;
+				transition: color 0.3s;
+	}
+	
+	.icon-box-4 a { 
+		color: #999;
+		-webkit-transition: color 0.3s;
+				transition: color 0.3s;
+	}
+		
+	.icon-box-4 > i { 
+		display: block;
+		margin-bottom: 50px; 
+		font-size: 50px;
+	}
+	
+	.icon-box-4 > img { margin-bottom: 40px; }
+	
+	.icon-box-4 h5 {
+		margin-bottom: 40px;
+		font-weight: 400;
+	}
+	
+	.icon-box-4 .icon-box-content {}
+	
+	.icon-box-4:hover, 
+	.icon-box-4:hover a { color: #000; }	
+
+/* ==========================================================================
+   =Milestones
+   ========================================================================== */
+
+	.milestone {
+		position: relative;
+		margin-bottom: 30px;
+		text-align: center;
+	}
+	
+	/*
+	 * 1. Clearfix hack 
+	 */
+	.milestone:after { /* 1 */
+		visibility: hidden;
+		display: block;
+		height: 0;
+		font-size: 0;
+		content: " ";
+		clear: both;		
+	}
+	
+	.milestone i {
+		z-index: 2;
+		display: inline-block;
+		margin-bottom: 40px;
+		font-size: 25px;
+	}
+	
+	.milestone .milestone-content {
+		z-index: 1;
+		font-size: 60px;
+		line-height: 60px;
+		font-weight: 400;
+	}
+	
+	.milestone .milestone-description {
+		margin-top: 40px;
+		font-size: 12px; 
+		line-height: 20px;
+		font-weight: 400;
+		letter-spacing: 2px;
+		text-transform: uppercase;
+	}
+
+/* ==========================================================================
+   =Our Process
+   ========================================================================== */
+
+/* =Horizontal process
+   ========================================================================== */
+
+	.horizontal-process-builder { 
+		position: relative;
+		margin-bottom: 40px;
+		list-style: none;
+		text-align: center; 
+	}
+	
+	.horizontal-process-builder:before {
+		position: absolute;
+		z-index: 1;
+		top: 60px;
+		left: 130px;
+		display: block;
+		width: 75%;
+		border-top: 1px solid #ccc;
+		content: "";
+	}
+	
+	.horizontal-process-builder li { 
+		float: left;
+		width: 25%;  
+	}
+	
+	.horizontal-process-builder li h5 {
+		position: relative;
+		z-index: 2;
+		display: block;
+		width: 115px; 
+		height: 115px;
+		overflow: hidden; 
+		border: 1px solid #ccc;
+		border-radius: 50%;
+		margin: 0 auto 45px auto;
+		outline: 10px solid #fff;
+		background-color: #fff;
+		background-clip: padding-box;
+		color: #000;
+	}
+	
+	.horizontal-process-builder li span {
+		display: block;
+		width: 115px; 
+		height: 115px;
+		border-radius: 50%;
+		line-height: 115px;
+		-webkit-transition: all 0.3s;
+				transition: all 0.3s; 
+	}
+	
+	.horizontal-process-builder li:hover span {
+		width: 95px;
+		height: 95px;
+		margin: 10px;
+		line-height: 95px;
+		background-color: #000; 
+		color: #fff;
+	}
+
+	.horizontal-process-builder.four-items li { width: 25%; }
+	.horizontal-process-builder.five-items li { width: 20%; }
+	
+	.process-description {
+		padding: 0 15px;
+		font-weight: 400;
+		text-transform: uppercase;
+	}
+	
+	/*
+	 * 1. Clearfix hack 
+	 */
+	.horizontal-process-builder:after { /* 1 */
+		visibility: hidden;
+		display: block;
+		height: 0;
+		font-size: 0;
+		content: " ";
+		clear: both;		
+	}
+	
+	@media (max-width: 767px) {
+		
+		.horizontal-process-builder li { 
+			float: none;
+			width: 100%;
+			margin-bottom: 40px; 
+		}
+		
+		.horizontal-process-builder:before { content: none; }
+		
+		.horizontal-process-builder.four-items li { width: 100%; }
+		.horizontal-process-builder.five-items li { width: 100%; }
+		
+	}
+
+/* ==========================================================================
+   =Pie charts
+   ========================================================================== */
+
+	.pie-chart {
+		position: relative;	
+		margin: 0 auto 40px;
+		text-align: center;
+	}
+	
+	.pie-chart canvas {
+		position: absolute;
+		z-index: 1;
+		top: 0;
+		left: 0;
+	}
+	
+	.pie-chart i, 
+	.pie-chart .pie-chart-custom-text, 
+	.pie-chart .pie-chart-percent {
+		position: absolute;
+		z-index: 2;
+		top: 0;
+		left: 0;
+		display: block;
+		width: 100%;
+		text-align: center;
+	}
+	
+	.pie-chart img {
+		max-width: 100%;
+		vertical-align: middle;
+	}
+	
+	.pie-chart .pie-chart-custom-text { font-size: 18px; }
+	
+	.pie-chart .pie-chart-custom-text i {
+		margin-top: -20px;
+		font-size: 25px !important;
+	}
+	
+	.pie-chart .pie-chart-percent {
+		font-size: 12px;
+		font-weight: 400;
+	}
+	
+	.pie-chart .pie-chart-custom-text + .pie-chart-percent { margin-top: 20px; }
+	
+	.pie-chart-description {
+		display: block;
+		margin-bottom: 30px;
+		font-size: 12px;
+		font-weight: 400;
+		letter-spacing: 2px;
+		text-align: center;
+		text-transform: uppercase;
+	}
+
+/* ==========================================================================
+   =Pricing Tables
+   ========================================================================== */
+
+	.pricing-table {
+		-webkit-box-sizing: border-box;
+		   -moz-box-sizing: border-box;
+				box-sizing: border-box;
+		padding: 40px 30px;
+		border: 1px solid #ccc;
+		margin-bottom: 30px;
+		text-align: center;
+		-webkit-transition: background-color 0.3s;
+				transition: background-color 0.3s;
+	}
+
+	.pricing-table-header {	margin-bottom: 20px; }
+
+	.pricing-table-header h1 {
+		padding: 10px 0;
+		margin-bottom: 0;
+		font-size: 60px;
+		line-height: 45px;
+	}
+	
+	.pricing-table-header h1 sup { font-size: 32px; }
+	
+	.pricing-table-header h1 small {
+		display: block;
+		font-size: 12px;
+		text-transform: lowercase;
+	}
+
+	.pricing-table-header h4 { margin-bottom: 15px; }
+	
+	.pricing-table-header h4:after {
+		display: block;
+		width: 70px;
+		border-bottom: 1px solid #000;
+		margin: 25px auto 0 auto;
+		content: "";
+	}
+		
+	.pricing-table-offer {}
+	
+	.pricing-table-offer ul {
+		margin-bottom: 50px;
+		list-style: none;
+	}
+	
+	.pricing-table-offer ul li { 
+		padding: 12px 0;
+		border-bottom: 1px solid #ccc; 
+		margin-bottom: 15px;
+	}
+	
+	.pricing-table-offer ul li:last-child { margin-bottom: 0; }
+	
+	@media (min-width: 768px) and (max-width: 991px) {
+		
+		.pricing-table { padding: 40px 15px; }
+		
+		.pricing-table .btn { 
+			padding: 8px 15px 8px 19px;
+			letter-spacing: 4px;
+		}
+		
+	}
+
+/* ==========================================================================
+   =Progress Bar
+   ========================================================================== */
+
+	.progress-bar-description {
+		display: block;
+		margin-bottom: 15px;
+		line-height: 14px;		
+	}
+	
+	.progress-bar-description span { float: right; }
+	
+	.progress-bar {
+		position: relative;
+		display: block;
+		height: 2px;
+		margin-bottom: 20px;
+		background-color: #ccc;
+	}
+	
+	.progress-bar .progress-bar-outer {
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		background-color: #000;
+	}
+	
+	.progress-bar .progress-bar-outer .progress-bar-inner {
+		position: absolute;
+		z-index: 1;
+		overflow: hidden;
+		top: 0;
+		left: 0;
+		display: block;
+		height: 100%;
+		width: 100%;
+	}
+
+/* ==========================================================================
+   =Revolution Slider
+   ========================================================================== */
+   
+/* =Rev Slider Basics
+   ========================================================================== */   
+   
+	.fullwidthbanner-container {
+		position: relative;
+		overflow: hidden;
+		width: 100% !important;
+		padding: 0;
+		margin: 0; 
+	}
+
+	.fullwidthbanner-container ul { list-style: none; }
+
+	.fullwidthbanner-container .fullwidthbanner {
+		position: relative;
+		width: 100% !important;
+	}
+	
+	.slider-revolution.fullwidthbanner-container { margin-bottom: 120px; }
+
+	.slider-revolution.fullwidthbanner-container .fullwidthbanner {}
+
+/* =Rev Slider Pager
+   ========================================================================== */
+
+   /**
+ 	 * 1. changing the z-index from 1000 so that the bullets don't go over the sticky menu
+ 	 */
+   
+	.tp-bullets { 
+		z-index: 100; /* 1 */
+	}
+	   
+	.tp-bullets.simplebullets.round .bullet {
+		width: 8px;
+		height: 8px;
+		border: 1px solid #fff;
+		border-radius: 50%;
+		margin: 0 3px;
+		background: #fff;
+	}
+
+	.tp-bullets.simplebullets.round .bullet.selected { background: transparent; }
+
+/* =Rev Slider navigation
+   ========================================================================== */
+
+	.tp-leftarrow.default,
+	.tp-rightarrow.default {
+		width: 37px;
+		height: 92px;
+		opacity: 0.5;
+	}
+
+	.tp-leftarrow.default:hover,
+	.tp-rightarrow.default:hover { opacity: 1; }
+
+	.tp-leftarrow.default { background: url(../images/left.png) no-repeat center center; }
+	.tp-rightarrow.default { background: url(../images/right.png) no-repeat center center; }
+	
+/* =Rev Slider typograhpy
+   ========================================================================== */
+   
+   	.caption.title {
+		color: #fff;
+		font-size: 72px;
+		line-height: 100px;
+		font-weight: 700;
+		letter-spacing: 10px;
+		text-transform: uppercase;
+	}
+	
+	.caption.subtitle {
+		color: #fff;
+		font-size: 36px;
+		line-height: 48px;
+		font-weight: 700;
+		letter-spacing: 6px;
+		text-transform: uppercase;
+		text-align: center;
+	}
+	
+	.caption.text {
+		color: #fff;
+		font-size: 22px;
+		line-height: 36px;
+		font-weight: 400;
+		letter-spacing: 2px;
+	}
+	
+	.caption .btn-white { 
+		border-color: #fff;
+		color: #fff !important;
+	}
+
+	@media (min-width: 768px) and (max-width: 991px) {
+		
+		.tp-leftarrow.default,
+		.tp-rightarrow.default { display: none; }
+		
+		.caption .btn { padding: 10px 15px; }
+		
+	}
+
+	@media (max-width: 767px) {
+		
+		.tp-leftarrow.default,
+		.tp-rightarrow.default { display: none; }
+		
+		.tp-bullets { bottom: 20px !important; }
+		
+		.caption .btn { 
+			padding: 2px 7px;
+			letter-spacing: 2px;
+		}
+		
+	}
+	
+/* ==========================================================================
+   =Social Media
+   ========================================================================== */
+
+	a.social-icon {
+		display: inline-block;
+		margin-right: 20px;
+		margin-bottom: 1px;
+		color: #000;
+		text-align: center;
+	}
+
+	a.social-icon:last-child { margin-right: 0; }
+
+	a.social-icon i { font-size: 16px; }
+	
+	a.social-icon:hover { text-decoration: none; }
+	
+	a.facebook-icon:hover { color: #0e59a0 !important; }
+	a.twitter-icon:hover { color: #0ea4ff !important; }
+	a.dribble-icon:hover { color: #ea73a0 !important; }
+	a.pinterest-icon:hover { color: #d73532 !important; }
+	a.googleplus-icon:hover { color: #282927 !important; }
+	a.tumblr-icon:hover { color: #586980 !important; }
+	a.instagram-icon:hover { color: #82685a !important; }
+	a.rss-icon:hover { color: #f79638 !important; }
+	a.linkedin-icon:hover { color: #018faf !important; }
+	a.skype-icon:hover { color: #00b0f6 !important; }
+	a.flickr-icon:hover { color: #0061db !important; }
+	a.vimeo-icon:hover { color: #63879c !important; }
+	a.github-icon:hover { color: #3b3b3b !important; }
+	a.youtube-icon:hover { color: #cc181e !important; }
+	a.windows-icon:hover { color: #6dc2e9 !important; }
+	a.dropbox-icon:hover { color: #007ee5 !important; }
+	a.xing-icon:hover { color: #026566 !important; }	
+	a.adn-icon:hover { color: #1ea076 !important; }
+	a.android-icon:hover { color: #98cb02 !important; }
+	a.apple-icon:hover { color: #000000 !important; }
+	a.behance-icon:hover { color: #2d9ad2 !important; }
+	a.bitbucket-icon:hover { color: #214f81 !important; }
+	a.bitcoin-icon:hover { color: #f7931b !important; }
+	a.codepan-icon:hover { color: #000000 !important; }
+	a.css3-icon:hover { color: #3289ce !important; }
+	a.delicious-icon:hover { color: #3399fe !important; }
+	a.deviantart-icon:hover { color: #c8da30 !important; }
+	a.digg-icon:hover { color: #0080c2 !important; }
+	a.drupal-icon:hover { color: #0077b9 !important; }
+	a.empire-icon:hover { color: #000000 !important; }
+	a.foursquare-icon:hover { color: #daecb0 !important; }
+	a.git-icon:hover { color: #f34f29 !important; }
+	a.gitti-icon:hover { color: #634c3e !important; }
+	a.hacker-news-icon:hover { color: #f18642 !important; }
+	a.html5-icon:hover { color: #e54c1f !important; }
+	a.joomla-icon:hover { color: #016fb9 !important; }
+	a.jsfiddle-icon:hover { color: #4679a4 !important; }
+	a.linux-icon:hover { color: #fece0e !important; }
+	a.maxcdn-icon:hover { color: #f36f20 !important; }
+	a.openid-icon:hover { color: #fe6101 !important; }
+	a.pagelines-icon:hover { color: #3783e3 !important; }
+	a.pied-piper-icon:hover { color: #0c7b48 !important; }
+	a.qq-icon:hover { color: #23286c !important; }
+	a.rebel-icon:hover { color: #000000 !important; }
+	a.reddit-icon:hover { color: #cee3f8 !important; }
+	a.renren-icon:hover { color: #0d81e4 !important; }
+	a.share-icon:hover { color: #252525 !important; }
+	a.slack-icon:hover { color: #453744 !important; }
+	a.soundcloud-icon:hover { color: #fe4e00 !important; }
+	a.spotify-icon:hover { color: #80bb41 !important; }
+	a.stack-exchange-icon:hover { color: #265a93 !important; }
+	a.stackoverflow-icon:hover { color: #fea501 !important; }
+	a.steam-icon:hover { color: #191919 !important; }
+	a.stumbleupon-icon:hover { color: #f04f23 !important; }
+	a.tencent-weibo-icon:hover { color: #0063a7 !important; }
+	a.trello-icon:hover { color: #226784 !important; }
+	a.vine-icon:hover { color: #00b081 !important; }
+	a.vk-icon:hover { color: #50769d !important; }
+	a.wechat-icon:hover { color: #a4dc31 !important; }
+	a.weibo-icon:hover { color: #d82828 !important; }
+	a.wordpress-icon:hover { color: #454442 !important; }
+	a.yahoo-icon:hover { color: #4b04a8 !important; }
+
+/* ==========================================================================
+   =Tabs
+   ========================================================================== */
+
+/* =Horizontal tabs
+   ========================================================================== */
+		
+   /*
+    *  1. Wraps around a horizontal tab group
+	*/
+   
+	.tabs-container {} /* 1 */
+
+	.tabs-container .tabs-menu { 
+		border-bottom: 1px solid #ccc;
+		margin-top: 10px; 
+		margin-bottom: 0;
+		list-style: none; 
+	}
+	
+	.tabs-container .tabs-menu li { display: inline; }
+	
+	.tabs-container .tabs-menu li a { 
+		float: left; 
+		display: block;
+		padding: 15px 40px; 
+		border: 1px solid #ccc;
+		border-bottom: none;
+		margin-right: 5px;	
+		margin-bottom: -1px;
+		background-color: #000;
+		color: #fff;
+		font-size: 14px;
+		letter-spacing: 2px;
+		text-decoration: none;
+		text-transform: uppercase;
+	}
+	
+	.tabs-container .tabs-menu li:last-child a { margin-right: 0; }
+	
+	.tabs-container .tabs-menu li a:hover { text-decoration: none; }
+	
+	.tabs-container .tabs-menu li a:hover,
+	.tabs-container .tabs-menu li.active a {
+		border-color: #ccc; 
+		background-color: #fff;
+		color: #000; 
+	}
+	
+	.tabs-container .tabs {
+		border: 1px solid #ccc; 
+		border-top: none;   
+		margin-bottom: 30px;
+	}
+	
+	.tabs-container .tab-content { 
+		padding: 50px 30px 30px 30px;
+		background-color: #fff;
+		color: #000;
+	}	
+	
+	/*
+	 * 1. Clearfix hack 
+	 */
+	.tabs-container .tabs-menu:after,
+	.tabs-container .tab-content:after { /* 1 */
+		visibility: hidden;
+		display: block;
+		height: 0;
+		font-size: 0;
+		content: " ";
+		clear: both;		
+	}
+	
+	@media (max-width: 767px) {
+	
+		.tabs-container .tabs-menu { border-bottom: none; }
+		
+		.tabs-container .tabs-menu li { display: block; }
+	
+		.tabs-container .tabs-menu li a { 
+			float: none; 
+			display: block;
+			padding: 20px 25px;
+			border: 1px solid #ccc;
+			border-top: none;
+			margin: 0;
+		}
+		
+		.tabs-container .tabs-menu li a:hover { text-decoration: none; }
+		
+		.tabs-container .tabs-menu li:first-child a { border-top: 1px solid #ccc; }
+		
+		.tabs-container .tabs-menu li.active a {  
+			padding: 20px 25px;
+			border-bottom-color: #212121;
+			margin: 0;
+			background-color: #fff;
+			color: #212121; 
+		}
+	  
+	}
+	
+/* ==========================================================================
+   =Testimonials
+   ========================================================================== */
+	
+	.testimonial { 
+		margin-bottom: 50px;
+		text-align: center;
+	}
+	
+	.testimonial blockquote { margin-bottom: 40px; }
+	
+	.testimonial img {
+		display: inline-block;
+		border-radius: 50%;
+		margin-bottom: 40px; 
+	}
+	
+	.testimonial h6 {
+		color: #76666f;
+		text-transform: none;
+	}
+	
+	/*
+	 * 1. Clearfix hack 
+	 */
+	.testimonial:after { /* 1 */
+		visibility: hidden;
+		display: block;
+		height: 0;
+		font-size: 0;
+		content: " ";
+		clear: both;		
+	}
+	
+/* ==========================================================================
+   =Team Member
+   ========================================================================== */
+
+	.team-member {
+		margin-bottom: 30px;
+		text-align: center;
+	}
+	
+	.team-member img {
+		display: block;
+		width: 100%;
+	}
+	
+	.team-member-details {
+		padding: 35px 0;
+		-webkit-transition: all 0.3s;
+				transition: all 0.3s;
+	}
+	
+	.team-member-details p { margin-bottom: 0; }
+	
+	.team-member:hover .team-member-details {
+		background-color: #000;
+		color: #fff;
+	}
+	
+/* ==========================================================================
+   =Portfolio Item
+   ========================================================================== */
+	
+	.portfolio-item { 
+		position: relative; 
+		margin-bottom: 50px;
+	}
+	
+	.portfolio-item-preview { position: relative; }
+	
+	.portfolio-item-preview > img {
+		display: block;
+		width: 100%;
+	}
+	
+	.portfolio-item-overlay {
+		position: absolute; 
+		top: 0; 
+		right: 0; 
+		bottom: 0; 
+		left: 0; 
+		background-color: rgba(0, 0, 0, 0.85);
+		color: #fff;
+		opacity: 0;
+		-webkit-transform: scale(0.2);
+			-ms-transform: scale(0.2);
+				transform: scale(0.2);
+		-webkit-transition: all 0.3s;
+				transition: all 0.3s;
+	}
+	
+	.portfolio-item-overlay a { color: #fff; }
+	
+	.portfolio-item:hover .portfolio-item-overlay { 
+		opacity: 1;
+		-webkit-transform: scale(1);
+			-ms-transform: scale(1);
+				transform: scale(1);
+	}	
+		
+	.portfolio-item-overlay-actions {
+		position: absolute;
+		top: 50%;
+		width: 100%;
+		-webkit-box-sizing: border-box;
+		   -moz-box-sizing: border-box;
+				box-sizing: border-box;
+		text-align: center;
+		opacity: 0;
+		-webkit-transform: translateY(-50%);
+				transform: translateY(-50%);
+		-webkit-transition: all 0.3s 0.2s;
+				transition: all 0.3s 0.2s;
+	}
+	
+	.portfolio-item:hover .portfolio-item-overlay-actions { opacity: 1; }
+	
+	.portfolio-item-overlay-actions .portfolio-item-zoom {
+		display: inline-block;
+		font-size: 100px;
+		line-height: 60px;
+		font-weight: 200;
+		text-decoration: none;
+	}
+	
+	.portfolio-item-description { text-align: center; }
+	.portfolio-item-preview + .portfolio-item-description { margin: 50px 0; }
+	
+	.portfolio-item-overlay .portfolio-item-description {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		opacity: 0;
+		-webkit-transition: all 0.3s 0.2s;
+				transition: all 0.3s 0.2s;
+	}
+	
+	.portfolio-item:hover .portfolio-item-overlay .portfolio-item-description {
+		bottom: 25%;
+		opacity: 1;
+	}
+	
+	.portfolio-item-description + .portfolio-item-overlay-actions { top: 40%; }
+	
+	@media (min-width: 768px) and (max-width: 991px) {
+		
+		.portfolio-item-description + .portfolio-item-overlay-actions { top: 30%; }
+		
+		.portfolio-item:hover .portfolio-item-overlay .portfolio-item-description { bottom: 15%; }
+		
+	}
+	
+	@media (max-width: 767px) {
+		
+		.portfolio-item-description + .portfolio-item-overlay-actions { top: 30%; }
+		
+		.portfolio-item:hover .portfolio-item-overlay .portfolio-item-description { bottom: 15%; }
+		
+	}
+	
+/* ==========================================================================
+   =Portfolio Filter
+   ========================================================================== */
+	
+	.portfolio-filter ul {
+		margin-bottom: 50px;
+		list-style: none;
+		text-align: center;
+	}
+	
+	.portfolio-filter ul li { 
+		display: inline-block;
+		margin-right: 10px;
+	}
+	
+	.portfolio-filter ul li:last-child { margin-right: 0; }
+	
+	.portfolio-filter ul li a {
+		display: block;
+		padding: 8px 20px;
+		border: 1px solid transparent;
+		text-transform: uppercase;
+		text-decoration: none;
+		-webkit-transition: border-color 0.3s;
+				transition: border-color 0.3s;
+	}
+	
+	.portfolio-filter ul li a:hover,
+	.portfolio-filter ul li a.active {
+		border-color: #000;
+	}	
+	
+	.load-more { margin-bottom: 100px; }
+	
+	@media (max-width: 767px) {
+		
+		.portfolio-filter ul li { 
+			display: block;
+			margin-bottom: 10px;
+		}
+		
+		.portfolio-filter ul li:last-child { margin-bottom: 0; }
+		
+	}
+
+/* ==========================================================================
+   =Portfolio Pagination
+   ========================================================================== */
+	
+	.portfolio-pagination { 
+		margin-bottom: 100px;
+		text-align: center;
+	}
+
+	/*
+	 * 1. Clearfix hack 
+	 */
+	.portfolio-pagination:after { /* 1 */
+		visibility: hidden;
+		display: block;
+		height: 0;
+		font-size: 0;
+		content: " ";
+		clear: both;		
+	}	
+	
+	.portfolio-pagination .nav-links {}
+
+	.portfolio-pagination .page-numbers {
+		display: inline-block;
+		width: 36px;
+		height: 36px;
+		border: 1px solid #999;
+		margin-right: 10px;
+		color: #999;
+		font-size: 14px;
+		line-height: 36px;
+		text-align: center;
+		text-decoration: none;
+		-webkit-transition: all 0.3s;
+				transition: all 0.3s;
+	}
+	
+	.portfolio-pagination .page-numbers:last-child { margin-right: 0; }
+
+	.portfolio-pagination .page-numbers:hover,
+	.portfolio-pagination .page-numbers.current {
+		border-color: #000;
+		color: #000;
+	}
+
+	.portfolio-pagination .current {}
+	
+	.portfolio-pagination .page-numbers.dots {
+		border: none;
+	}
+	
+	.portfolio-pagination .page-numbers.dots:hover {
+		background-color: transparent;
+		color: #000;
+	}
+
+	.portfolio-pagination .prev,
+	.portfolio-pagination .next {}
+
+	.portfolio-pagination .prev:before,
+	.portfolio-pagination .next:before { font-family: "FontAwesome"; }
+
+	.portfolio-pagination .prev:hover,
+	.portfolio-pagination .prev:focus,
+	.portfolio-pagination .next:hover,
+	.portfolio-pagination .next:focus {}
+
+	.portfolio-pagination .prev {}
+
+	.portfolio-pagination .prev:before { content: "\f104"; }
+
+	.portfolio-pagination .next {}
+
+	.portfolio-pagination .next:before { content: "\f105"; }
+   
+/* ==========================================================================
+   =Portfolio Grid
+   ========================================================================== */
+
+   .portfolio-grid {
+		margin: 50px 0 100px 0;
+		list-style: none;
+	}
+	
+	.portfolio-grid.gutter { margin: 85px -15px 100px -15px; }
+	
+	.portfolio-grid .item {
+		float: left;
+		width: 33.33333%;
+		-webkit-box-sizing: border-box;
+		   -moz-box-sizing: border-box;
+				box-sizing: border-box;
+	}
+	
+	.portfolio-grid.gutter .item { padding: 15px; }
+	
+	.portfolio-grid .portfolio-item { margin-bottom: 0; }
+	
+	.portfolio-grid.three-cols .item { width: 33.33333%; } 
+	.portfolio-grid.four-cols .item { width: 25%; } 
+	.portfolio-grid.five-cols .item { width: 25%; } 
+	
+	/*
+	 * 1. Clearfix hack 
+	 */
+	.portfolio-grid:after { /* 1 */
+		visibility: hidden;
+		display: block;
+		height: 0;
+		font-size: 0;
+		content: " ";
+		clear: both;		
+	}
+	
+	@media (min-width: 1200px) {
+		
+		.portfolio-grid.five-cols .item { width: 20%; } 
+		
+	}
+	
+	@media (min-width: 768px) and (max-width: 991px) {
+		
+		.portfolio-grid.four-cols .item,
+		.portfolio-grid.five-cols .item { width: 33.33333%; } 
+		
+	}
+	
+	@media (max-width: 767px) {
+		
+		.portfolio-grid .item {
+			float: none;
+			width: 100%; 
+		}
+		
+		.portfolio-grid.three-cols .item,
+		.portfolio-grid.four-cols .item,
+		.portfolio-grid.five-cols .item { width: 100%; }
+		
+	}
+	
+	@media only screen and (min-width: 480px) and (max-width: 767px) {
+		
+		.portfolio-grid .item {
+			float: left;
+			width: 50%; 
+		}
+		
+		.portfolio-grid.three-cols .item,
+		.portfolio-grid.four-cols .item,
+		.portfolio-grid.five-cols .item { width: 50%; }
+		
+	}
+   
+/* ==========================================================================
+   =Portfolio Strip
+   ========================================================================== */
+   
+   .portfolio-strip {
+		margin-bottom: 30px;
+		list-style: none;
+	}
+	
+	.portfolio-strip .item {
+		float: left;
+		width: 25%;
+	}
+	
+	.portfolio-strip .item:last-child { display: none; }
+	
+	.portfolio-strip .portfolio-item { margin-bottom: 0; } 
+	
+	/*
+	 * 1. Clearfix hack 
+	 */
+	.portfolio-strip:after { /* 1 */
+		visibility: hidden;
+		display: block;
+		height: 0;
+		font-size: 0;
+		content: " ";
+		clear: both;		
+	}
+	
+	@media (min-width: 1200px) {
+		
+		.portfolio-strip .item { width: 20%; }
+		.portfolio-strip .item:last-child { display: block; } 
+		
+	}
+	
+	@media (min-width: 768px) and (max-width: 991px) {
+		
+		.portfolio-strip .item { width: 33.3333333333%; }
+		.portfolio-strip .item:last-child { display: block; } 
+		
+	}
+	
+	@media (max-width: 767px) {
+		
+		.portfolio-strip .item {
+			float: none;
+			width: 100%; 
+		}
+		
+		.portfolio-strip .item:last-child { display: block; } 
+		
+	}
+	
+	@media only screen and (min-width: 480px) and (max-width: 767px) {
+		
+		.portfolio-strip .item {
+			float: left;
+			width: 50%; 
+		}
+		
+	}
+	
+/* ==========================================================================
+   =Bx Slider
+   ========================================================================== */
+   
+/* =Bx Slider reset
+   ========================================================================== */
+   
+   .bx-wrapper { margin: 0 auto 40px; }
+   
+  ul.slides { list-style: none; }
+   
+/* =Bx Slider theme
+   ========================================================================== */   
+   
+   .bx-wrapper .bx-viewport {		
+		left: auto;
+		border: none;
+		-webkit-box-shadow: none;
+		   -moz-box-shadow: none;
+				box-shadow: none;		
+		background: none;
+	}
+	
+/* =Bx Slider Pager
+   ========================================================================== */ 
+   
+	.bx-wrapper .bx-pager,
+	.bx-wrapper .bx-controls-auto { bottom: -40px; }
+	
+	.bx-wrapper .bx-pager.bx-default-pager a {
+		width: 7px;
+		height: 7px;
+		border: 1px solid #000;
+		background-color: transparent;
+	}
+	
+/* =Bx Slider Dir Nav
+   ========================================================================== */ 
+   
+	.bx-wrapper .bx-prev {
+		left: 0;
+		background: url(../images/left-2.png) no-repeat center center;
+	}
+
+	.bx-wrapper .bx-next {
+		right: 0;
+		background: url(../images/right-2.png) no-repeat center center;
+	}
+	
+	.bx-wrapper .bx-prev:hover, 
+	.bx-wrapper .bx-next:hover { background-position: center center; }
+	
+	/*
+	 * 1. We are changing the original z-index from 9999 to 1000 so that it doesn't overlap other elements that need to be above this one
+	 */
+	.bx-wrapper .bx-controls-direction a {
+		width: 48px;
+		height: 48px;
+		z-index: 1000; /* 1 */
+	}	
+	
+	.images-slider-2 { margin-bottom: 50px; }
+
+/* ==========================================================================
+   =Fullwidth section
+   ========================================================================== */
+   
+   	.fullwidth-section.custom-color-selected { color: #fff; }
+	
+	.fullwidth-section.custom-color-selected a,
+	.fullwidth-section.custom-color-selected .portfolio-pagination .page-numbers:hover,
+	.fullwidth-section.custom-color-selected .portfolio-pagination .page-numbers.current,
+	.fullwidth-section.custom-color-selected .pagination .page-numbers:hover,
+	.fullwidth-section.custom-color-selected .pagination .page-numbers.current { color: inherit; }
+	
+	.fullwidth-section.custom-color-selected .pricing-table-header h4:after,
+	.fullwidth-section.custom-color-selected .headline:after,
+	.fullwidth-section.custom-color-selected .headline-center:after,
+	.fullwidth-section.custom-color-selected .portfolio-filter ul li a:hover,
+	.fullwidth-section.custom-color-selected .portfolio-filter ul li a.active,
+	.fullwidth-section.custom-color-selected .portfolio-pagination .page-numbers:hover,
+	.fullwidth-section.custom-color-selected .portfolio-pagination .page-numbers.current,
+	.fullwidth-section.custom-color-selected .pagination .page-numbers:hover,
+	.fullwidth-section.custom-color-selected .pagination .page-numbers.current,
+	.fullwidth-section.custom-color-selected .features-list .features-list-menu li a, 
+	.fullwidth-section.custom-color-selected .clients-logos li, 
+	.fullwidth-section.custom-color-selected .clients-logos + .clients-logos, 
+	.fullwidth-section.custom-color-selected .horizontal-process-builder:before,
+	.fullwidth-section.custom-color-selected .bx-wrapper .bx-pager.bx-default-pager a { border-color: inherit; }
+	
+	.fullwidth-section.custom-color-selected .btn:hover { color: #000; }
+	
+	.fullwidth-section.custom-color-selected .btn-white { 
+		border-color: #fff !important;
+		color: #fff !important;
+	}
+	
+	.fullwidth-section.custom-color-selected .horizontal-process-builder li h5 {
+		border-color: inherit;
+		background-color: #000;
+		outline: 0;
+		color: inherit;
+	}
+	
+	.fullwidth-section.custom-color-selected .horizontal-process-builder li:hover h5 span {
+		background-color: #fff;
+		color: #000;
+	}
+	
+	#bg-1 {
+		padding: 180px 0 150px 0;
+		margin-top: 50px;
+		background-image: url(../../content/backgrounds/1920x1080-1.jpg);
+	}
+	
+	#bg-2 {
+		padding-top: 100px;
+		padding-bottom: 0;
+		margin-top: 50px;
+		margin-bottom: 0;
+		background-image: url(../../content/backgrounds/1920x1080-2.jpg);
+	}
+	
+	#bg-3 {
+		padding: 200px 0;
+		margin-bottom: 0;
+		background-image: url(../../content/backgrounds/1920x1080-3.jpg);
+		color: #000;
+	}
+	
+	#bg-4 {
+		padding: 80px 0 40px 0;
+		margin-bottom: -50px;
+		background-color: #f6f6f6;
+		color: #000;
+	}
+	
+	#bg-5 {
+		padding: 100px 0 50px 0;
+		margin-top: 50px;
+		background-color: #181a1d;
+	}
+	
+	#bg-6 {
+		padding: 70px 0;
+		margin-top: 60px;
+		background-image: url(../../content/backgrounds/1920x1080-4.jpg);
+	}
+	
+	#bg-7 {
+		padding: 100px 0 30px 0;
+		margin-top: 70px;
+		background-image: url(../../content/backgrounds/1920x2500.jpg);
+	}
+	
+	#bg-8 {
+		padding: 100px 0;
+		margin-top: 50px;
+		background-image: url(../../content/backgrounds/1920x1080-5.jpg);
+	}
+	
+	#bg-8 .btn { margin-top: 20px; }
+	
+	#bg-9 {
+		padding: 140px 0 110px 0;
+		margin-top: 80px;
+		background-image: url(../../content/backgrounds/1920x1080-6.jpg);
+	}
+	
+	#bg-10 {
+		padding-top: 100px;
+		padding-bottom: 0;
+		margin-top: 80px;
+		background-image: url(../../content/backgrounds/1920x1080-7.jpg);
+		color: #000;
+	}
+	
+	#bg-11 {
+		padding: 120px 0 80px 0;
+		margin-top: 30px;
+		background-image: url(../../content/backgrounds/1920x1080-8.jpg);
+	}
+	
+	#bg-12 {
+		padding: 80px 0 40px 0;
+		margin-top: 80px;
+		margin-bottom: -50px;
+		background-image: url(../../content/backgrounds/1920x1080-9.jpg);
+		color: #000;
+	}
+	
+	#bg-13 {
+		padding: 140px 0 80px 0;
+		margin-top: 80px;
+		background-image: url(../../content/backgrounds/1920x1600.jpg);
+	}
+	
+	#bg-14 {
+		padding: 80px 0 40px 0;
+		margin-top: 80px;
+		margin-bottom: -50px;
+		background-image: url(../../content/backgrounds/1920x1080-10.jpg);
+		color: #000;
+	}
+	
+	#bg-15 {
+		padding: 120px 0 80px 0;
+		margin-top: 30px;
+		background-image: url(../../content/backgrounds/1920x1080-11.jpg);
+	}
+	
+	#bg-16 {
+		background-image: url(../../content/backgrounds/1920x1080-4.jpg);
+	}
+	
+	#bg-17 {
+		background-image: url(../../content/backgrounds/1920x1080-4.jpg);
+	}
