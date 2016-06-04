@@ -39,7 +39,7 @@ $(document).ready(function () {
 		</div><!-- End content --> \
 		';
 
-    $(".switcher").prepend(styleswitcherstr);
+	// $(".switcher").prepend(styleswitcherstr);
 
 });
 

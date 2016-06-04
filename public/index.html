@@ -963,42 +963,30 @@
 
     <script src="assets/vendors/switcher/jquery_cookie.js"></script>
     <script src="assets/vendors/switcher/switcher.js"></script>
-   <div style="left: -220px;" class="switcher">
-   <h3>Style Switcher <a href="#"><i class="fa fa-wrench"></i></a></h3>
+   <div style="left: -220px; " class="switcher">
+   <h3>Contact Us <a href="#"><i class="fa fa-envelope"></i></a></h3>
+
    <div class="content">
-      <h5>Choose Layout Style</h5>
-      <div class="layout-switcher fixed">    
-         <a id="wide" class="layout">Wide</a>   
-         <a id="boxed" class="layout">Boxed</a> 
-      </div>
-      <h5>Patterns for Boxed</h5>
-      <div class="fixed">     
-         <a id="bg" class="pattern"></a> 
-         <a id="bg2" class="pattern"></a>  
-         <a id="bg3" class="pattern"></a>     
-         <a id="bg4" class="pattern"></a> 
-         <a id="bg5" class="pattern"></a>      
-         <a id="bg6" class="pattern"></a>    
-         <a id="bg7" class="pattern"></a> 
-         <a id="bg8" class="pattern"></a>  
-         <a id="bg9" class="pattern"></a>  
-         <a id="bg10" class="pattern"></a>  
-         <a id="bg11" class="pattern"></a>   
-         <a id="bg12" class="pattern"></a>    
-         <a id="bg13" class="pattern"></a>    
-         <a id="bg14" class="pattern"></a>      
-         <a id="bg15" class="pattern"></a>     
-         <a id="bg16" class="pattern"></a>     
-         <a id="bg17" class="pattern"></a>  
-         <a id="bg18" class="pattern"></a>    
-         <a id="bg19" class="pattern"></a>    
-         <a id="bg20" class="pattern"></a>       
-      </div>
-      <h5>Image for Boxed</h5>
-      <a id="bg21" class="pattern alt"></a>   
-      <a id="bg22" class="pattern alt"></a>   
-      <a id="bg23" class="pattern alt"></a> 
-     <br>        
+      <form id="contact-form" name="contact-form" method="post" action="http://kepler.europadns.net/html/assets/php/send.php">  
+                            <fieldset>
+                                <div id="formstatus"></div>
+                                <p>
+                                    <input class="span12" id="name" name="name" value="" placeholder="Name*" type="text">
+                                </p>
+                                <p>
+                                    <input class="span12" id="email" name="email" value="" placeholder="Email*" type="text">
+                                </p>
+                                <p>
+                                    <input class="span12" id="subject" name="subject" value="" placeholder="Subject*" type="text">
+                                </p>
+                                <p>
+                                    <textarea class="span12" id="message" name="message" rows="7" cols="25" placeholder="Message*"></textarea>
+                                </p>
+                                <p class="last">
+                                    <input class="btn" id="submit" name="submit" value="Submit" type="submit">
+                                </p>
+                            </fieldset>
+                        </form>       
    </div>
    <!-- End content -->      
     <script type="text/javascript">
