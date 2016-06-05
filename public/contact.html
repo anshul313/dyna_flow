@@ -33,7 +33,7 @@
 	<link rel="stylesheet" href="assets/css/layout.css">
 	<link rel="stylesheet" href="assets/css/components.css">
     <!-- <link rel="stylesheet" href="assets/css/style.css"> -->
-    
+     <link rel="stylesheet" href="assets/vendors/switcher/switcher.css">
 	<!-- /// Boxed layout ////////  -->
 	<!-- <link rel="stylesheet" href="assets/css/boxed.css"> -->
  
@@ -386,7 +386,34 @@
     <script src="assets/vendors/superfish/superfish.js"></script>
     
    
-    
+       <script src="assets/vendors/switcher/jquery_cookie.js"></script>
+    <script src="assets/vendors/switcher/switcher.js"></script>
+   <div style="left: -340px; " class="switcher">
+   <h3>Contact Us <a href="#"><i class="fa fa-envelope"></i></a></h3>
+
+   <div class="content">
+      <form id="contact-form" name="contact-form" method="post" action="http://kepler.europadns.net/html/assets/php/send.php">  
+            <fieldset>
+                <div id="formstatus"></div>
+                <p>
+                    <input class="span12" id="name" name="name" value="" placeholder="Name*" type="text">
+                </p>
+                <p>
+                    <input class="span12" id="email" name="email" value="" placeholder="Email*" type="text">
+                </p>
+                <p>
+                    <input class="span12" id="subject" name="subject" value="" placeholder="Subject*" type="text">
+                </p>
+                <p>
+                    <textarea class="span12" id="message" name="message" rows="7" cols="25" placeholder="Message*"></textarea>
+                </p>
+                <p class="last">
+                    <input class="btn" id="submit" name="submit" value="Submit" type="submit">
+                </p>
+            </fieldset>
+        </form>       
+   </div>
+   <!-- End content --> 
 
     
     <!-- /// Custom JS ////////  -->
@@ -404,7 +431,7 @@
           zoom: 15
         });
 
-        var marker = new google.maps.Marker({ position:{lat: 28.6848382, lng: 76.9462645}, map: map, title: 'Hello World!' }); 
+        var marker = new google.maps.Marker({ position:{lat: 28.6848382, lng: 76.9462645}, map: map, title: 'DYNAFLOW EQUIPMENTS PVT LTD' }); 
       }
 
 
