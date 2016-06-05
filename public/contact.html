@@ -288,16 +288,8 @@
                     <div class="span12">
                         
                         <div id="map">
-                          <!--  <div class="google-map" 
-                                data-zoom="17" 
-                                data-address="Turkey Pen Road, New York, USA" 
-                                data-caption="Office location" 
-                                data-maptype="ROADMAP"
-                                data-popup="false"
-                                data-mapheight="400">
-                               <p>This will be replaced with the Google Map.</p> -->
-                            </div><!-- end .google-map -->
-                        </div><!-- end .map -->
+                         
+                        </div><!-- end .google-map -->
                         
                     </div><!-- end .span12 -->
                 </div><!-- end .row -->
@@ -399,8 +391,13 @@
     
     <!-- /// Custom JS ////////  -->
     <script src="assets/js/main.js"></script>  
-    <script>
-      function initMap() {
+   
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC_L-M5HSwzBfyng9im-zrHBzmXsZRhn4c&callback=initMap"
+        async defer></script>
+  </body> 
+    
+<script type="text/javascript">
+ function initMap() {
         var mapDiv = document.getElementById('map');
         var map = new google.maps.Map(mapDiv, {
           center: {lat: 28.6848382, lng: 76.9462645},
@@ -409,17 +406,6 @@
 
         var marker = new google.maps.Marker({ position:{lat: 28.6848382, lng: 76.9462645}, map: map, title: 'Hello World!' }); 
       }
-    </script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC_L-M5HSwzBfyng9im-zrHBzmXsZRhn4c&callback=initMap"
-        async defer></script>
-  </body> 
-    
-<script type="text/javascript">
-
-/* ==============================================
-  ANIMATED BACKGROUND
-=============================================== */ 
-
 
 
 </script>  
