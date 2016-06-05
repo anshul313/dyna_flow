@@ -36,8 +36,9 @@
    
    	#header-top { 
    		padding: 15px 0; 
-		color: #76666f;
-		font-size: 12px;
+		color: #ffffff;
+		/*font-size: 12px;*/
+	font-weight: initial;
 	}
    
    @media (max-width: 767px) {
@@ -172,7 +173,7 @@
 	.header-style-2 .sf-menu > li.dropdown > a {
 		padding: 55px 20px 35px 20px;
 		color: #fff; 
-	}
+		font-weight: 900	}
 	
 	.header-style-3 .sf-menu > li > a,
 	.header-style-3 .sf-menu > li.dropdown > a { color: #fff; }
