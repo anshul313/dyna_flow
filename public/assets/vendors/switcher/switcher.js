@@ -1,6 +1,6 @@
-$(document).ready(function () {
+$(document).ready(function() {
 
-    var styleswitcherstr = ' \
+	var styleswitcherstr = ' \
 		<h3>Style Switcher <a href="#"><i class="fa fa-wrench"></i></a></h3> \
 		<div class="content"> \
 		<h5>Choose Layout Style</h5> \
@@ -45,66 +45,65 @@ $(document).ready(function () {
 
 /* Template Layout  */
 
-$(document).ready(function () {
+$(document).ready(function() {
 
-    var cookieName = 'kepler-layout';
+	var cookieName = 'kepler-layout';
 
-    function changeLayout(layout) {
-        $.cookie(cookieName, layout);
-        document.location.reload();
-    }
+	function changeLayout(layout) {
+		$.cookie(cookieName, layout);
+		document.location.reload();
+	}
 
-    $("#wide").click(function () {
-        changeLayout('wide');
-    });
+	$("#wide").click(function() {
+		changeLayout('wide');
+	});
 
-    $("#boxed").click(function () {
-        changeLayout('boxed');
-    });
+	$("#boxed").click(function() {
+		changeLayout('boxed');
+	});
 
 });
 
 
 /* Template Background */
 
-$(document).ready(function () {
+$(document).ready(function() {
 
 
-    $(".pattern").click(function () {
-        var id = $(this).attr('id');
-		
+	$(".pattern").click(function() {
+		var id = $(this).attr('id');
+
 		// remove previous bg classes applied to body
-		$('body').removeClass(function(i, c)
-		{
+		$('body').removeClass(function(i, c) {
 			return c.match(/\S*bg\S*/g) ? c.match(/\S*bg\S*/g).join(' ') : false;
 		});
-		
+
 		$("body").addClass(id);
-        $.cookie('kepler-bg', id);
-    });
+		$.cookie('kepler-bg', id);
+	});
 
 });
 
 /* Switcher */
 
-$(document).ready(function () {
-	
-    $('.switcher').animate({
-        left: '-220px'
-    });
+$(document).ready(function() {
 
-    $('.switcher h3 a').click(function (e) {
-        e.preventDefault();
-        var div = $('.switcher');
-        if (div.css('left') === '-220px') {
-            $('.switcher').animate({
-                left: '20px'
-            }, 300);
-        } else {
-            $('.switcher').animate({
-                left: '-220px'
-            }, 300);
-        }
-    });
+	$('.switcher').animate({
+		left: '-340px'
+	});
+
+	$('.switcher h3 a').click(function(e) {
+		e.preventDefault();
+		var div = $('.switcher');
+		if (div.css('left') === '-340px') {
+			$('.switcher').animate({
+				left: '20px'
+			}, 300);
+		} else {
+			$('.switcher').animate({
+				left: '-340px'
+			}, 300);
+		}
+	});
 
 });
