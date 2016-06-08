@@ -79,7 +79,7 @@
 		max-width: 100%; 	/* 1 */
 	}
 	
-	#logo img { display: block; }	
+	#logo img { height:70px; display: block; }	
 	
 	@media (max-width: 767px) {
 
@@ -478,7 +478,7 @@
    =Content
    ========================================================================== */
    	
-	#content { padding-bottom: 50px; }
+	/*#content { padding-bottom: 50px; }*/
 
 /* ==========================================================================
    =Page Header

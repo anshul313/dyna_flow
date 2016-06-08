@@ -32,8 +32,8 @@
 	<link rel="stylesheet" href="assets/css/elements.css">
 	<link rel="stylesheet" href="assets/css/layout.css">
 	<link rel="stylesheet" href="assets/css/components.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-    
+    <!-- <link rel="stylesheet" href="assets/css/style.css"> -->
+     <link rel="stylesheet" href="assets/vendors/switcher/switcher.css">
 	<!-- /// Boxed layout ////////  -->
 	<!-- <link rel="stylesheet" href="assets/css/boxed.css"> -->
  
@@ -42,9 +42,7 @@
     
 </head>
 <body class="sticky-header header-style-2 footer-style-1 home-page">
-<div id="loader">
-  <div class="loader"> <img  class="img-responsive" src="assets/images/main/loader.svg" alt="" > </div>
-</div>
+
 	<div id="wrap">			
 		<div id="header-wrap">
             <div id="header">
@@ -537,10 +535,6 @@ is a customer focused oragnization established by Mr.Kulwant singh to provide hi
 
    
 
-    
-    
-     <script src="assets/js/wow.min.js"></script> 
-    <!-- /// Superfish Menu ////////  -->
     <script src="assets/vendors/superfish/hoverIntent.js"></script>
     <script src="assets/vendors/superfish/superfish.js"></script>
     
@@ -549,36 +543,41 @@ is a customer focused oragnization established by Mr.Kulwant singh to provide hi
     
     
     
-    <!-- /// Isotope ////////  -->
-    <script src="assets/vendors/isotope/imagesloaded.pkgd.min.js"></script>
-    <script src="assets/vendors/isotope/isotope.pkgd.min.js"></script>
-    
-    
-    
-    
-    <!-- /// Easy Tabs ////////  -->
-    <script src="assets/vendors/easytabs/jquery.easytabs.min.js"></script>  
-    <script src="assets/js/jquery.superslides.min.js"></script>
-  
+
     
   
     
     <!-- /// Custom JS ////////  -->
     <script src="assets/js/main.js"></script>   
-    
-<script type="text/javascript">
+    <script src="assets/vendors/switcher/jquery_cookie.js"></script>
+    <script src="assets/vendors/switcher/switcher.js"></script>
+   <div style="left: -340px; " class="switcher">
+   <h3>Contact Us <a href="#"><i class="fa fa-envelope"></i></a></h3>
 
-/* ==============================================
-  ANIMATED BACKGROUND
-=============================================== */ 
-$(document).ready(function() {
-  $('#particles').particleground({
-    dotColor: '#00A550',
-    parallax: 'true',
-    lineColor: '#0095D9'
- }); 
-new WOW().init(); 
-});
+   <div class="content">
+      <form id="contact-form" name="contact-form" method="post" action="http://kepler.europadns.net/html/assets/php/send.php">  
+            <fieldset>
+                <div id="formstatus"></div>
+                <p>
+                    <input class="span12" id="name" name="name" value="" placeholder="Name*" type="text">
+                </p>
+                <p>
+                    <input class="span12" id="email" name="email" value="" placeholder="Email*" type="text">
+                </p>
+                <p>
+                    <input class="span12" id="subject" name="subject" value="" placeholder="Subject*" type="text">
+                </p>
+                <p>
+                    <textarea class="span12" id="message" name="message" rows="7" cols="25" placeholder="Message*"></textarea>
+                </p>
+                <p class="last">
+                    <input class="btn" id="submit" name="submit" value="Submit" type="submit">
+                </p>
+            </fieldset>
+        </form>       
+   </div>
+   <!-- End content --> 
+<script type="text/javascript">
 
 
 </script>  
