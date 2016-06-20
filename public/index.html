@@ -1029,7 +1029,7 @@ and hence our products are highly recognized and recommended </p>
     activeTab.css('display','none');
     activeTab.attr('class','tab-content');
     return false
-   })
+   });
        var mainDiv = document.getElementById("mainDiv");
        for(var i=3;i<34;i++){
         var item = document.createElement("div");
@@ -1046,7 +1046,7 @@ and hence our products are highly recognized and recommended </p>
                             +'</div>'
                             +'</div>';
         mainDiv.appendChild(item);  
-        if(i!=31)
+        if(i!=31){
             index = i<10?"0"+i:i;
            item.innerHTML = '<div class="portfolio-item">'
                             +'<img src="content/Images/'+index+'.png" alt="" class="img-responsive">'
